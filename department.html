@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Engineering Department</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #004080;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            background: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #004080;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #e6eef7;
+        }
+
+        button {
+            background: #004080;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0066cc;
+        }
+
+        footer {
+            background: #004080;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        #subjects {
+            margin-top: 15px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 5px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+            section {
+                margin: 10px;
+                padding: 15px;
+                overflow-x: auto;
+            }
+
+            table {
+                min-width: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <h1>Computer Engineering Department</h1>
+
+        <nav>
+            <a href="#faculty">Faculty</a>
+            <a href="#labs">Labs</a>
+            <a href="#syllabus">Syllabus</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#placements">Placements</a>
+        </nav>
+    </header>
+
+    <!-- About Department -->
+    <section>
+        <h2>About Department</h2>
+
+        <p>
+            The Computer Engineering Department provides quality education
+            in software, hardware, networking, artificial intelligence,
+            and web technologies.
+        </p>
+
+        <p>
+            Students are encouraged to participate in technical events,
+            internships, and project-based learning.
+        </p>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty">
+        <h2>Faculty Members</h2>
+
+        <ul>
+            <li>Dr. Amit Patil - Head of Department</li>
+            <li>Prof. Neha Joshi</li>
+            <li>Prof. Rahul Shah</li>
+            <li>Prof. Sneha Kulkarni</li>
+        </ul>
+    </section>
+
+    <!-- Laboratories Section -->
+    <section id="labs">
+        <h2>Laboratories</h2>
+
+        <ul>
+            <li>Programming Lab</li>
+            <li>Database Management Lab</li>
+            <li>Networking Lab</li>
+            <li>Web Development Lab</li>
+            <li>Operating System Lab</li>
+        </ul>
+    </section>
+
+    <!-- Syllabus Section -->
+    <section id="syllabus">
+        <h2>Syllabus</h2>
+
+        <button onclick="showSyllabus()">
+            Show Semester Subjects
+        </button>
+
+        <p id="subjects"></p>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <h2>Achievements</h2>
+
+        <ul>
+            <li>University Rank Holders</li>
+            <li>National Level Hackathon Winners</li>
+            <li>Smart India Hackathon Finalists</li>
+            <li>Best Project Award</li>
+        </ul>
+    </section>
+
+    <!-- Placement Statistics -->
+    <section id="placements">
+        <h2>Placement Statistics</h2>
+
+        <table>
+            <tr>
+                <th>Year</th>
+                <th>Students Placed</th>
+                <th>Highest Package</th>
+            </tr>
+
+            <tr>
+                <td>2026</td>
+                <td>120</td>
+                <td>18 LPA</td>
+            </tr>
+
+            <tr>
+                <td>2025</td>
+                <td>110</td>
+                <td>15 LPA</td>
+            </tr>
+
+            <tr>
+                <td>2024</td>
+                <td>105</td>
+                <td>12 LPA</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Computer Engineering Department</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function showSyllabus() {
+            document.getElementById("subjects").innerHTML = `
+                <b>Semester III</b><br>
+                Data Structures<br>
+                Digital Logic<br>
+                Discrete Mathematics<br>
+                Object Oriented Programming<br><br>
+
+                <b>Semester IV</b><br>
+                Database Management System<br>
+                Operating System<br>
+                Computer Networks<br>
+                Web Development
+            `;
+        }
+    </script>
+
+</body>
+</html>
